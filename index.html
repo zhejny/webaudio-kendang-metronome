@@ -13,7 +13,7 @@
 
 <body>
   <div>
-    <button id="startStopButton">start/stop</button>
+    <button id="startStopButton">start/stop</button> (needs ~30s to load ... will fix!)
   </div>
   <div>
     <input type="range" id="tempoSlider" value="135" min="40" max="200"
@@ -28,8 +28,18 @@
   <div>
     <select name="polaSelect" id="polaSelect">
       <option value="">[select pola]</option>
+      <option value="barongBaris">barong baris</option>
+      <option value="barongCondong">barong condong</option>
+      <option value="barongGoakMacok">barong goak macok</option>
       <option value="barongOmang">barong omang</option>
       <option value="bapangJaukKeras">bapang jauk keras</option>
+      <option value="pengadengJaukKeras">pengadeng jauk keras</option>
+      <option value="bapangJaukManis">bapang jauk manis</option>
+      <option value="pengadengJaukManis">pengadeng jauk manis</option>
+      <option value="pengipukKebyarDuduk">pengipuk kebyar duduk</option>
+      <option value="pengipukTerunaJaya">pengipuk teruna jaya</option>
+      <option value="gilak8Beat">gilak 8-beat</option>
+      <option value="gilak16Beat">gilak 16-beat</option>
     </select>
   </div>
   <div>
@@ -51,8 +61,8 @@
   <div>
     <input type="checkbox" id="kecekToggle" name="kecekToggle">
     <label for="kecekToggle">kecek</label>
-    <!-- <input type="checkbox" id="kecekLegongToggle" name="kecekLegongToggle" checked>
-    <label for="kecekLegongToggle">pola legong/barong</label> -->
+    <input type="checkbox" id="kecekLegongToggle" name="kecekLegongToggle" checked>
+    <label for="kecekLegongToggle">pola legong/barong</label>
   </div>
   <div>
     <input type="checkbox" id="klenangToggle" name="klenangToggle">

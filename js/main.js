@@ -47,6 +47,7 @@ function playSample(triggerTime, playDur, smplIdx, amplitude) {
 function looper() {
   while (futureBeatTime < audioContext.currentTime + 0.10) {
     currentPola = document.querySelector("#polaSelect").value;
+    patternLength = polaDefinitions[currentPola].length;
     futureBeatTime += 0.25 * 60 / tempo;
 
     for (let instrument in polaDefinitions[currentPola].percussionInstruments) {
@@ -57,7 +58,10 @@ function looper() {
         const durationIndex = polaDefinitions[currentPola].percussionInstruments[instrument].onsets.indexOf(currentBeat);
         const noteDuration = polaDefinitions[currentPola].percussionInstruments[instrument].durations[durationIndex] * 60 / tempo;
         const smplIdx = polaDefinitions[currentPola].percussionInstruments[instrument].sampleIndex;
-        const amplitude = polaDefinitions[currentPola].percussionInstruments[instrument].amplitude;
+        let amplitude = polaDefinitions[currentPola].percussionInstruments[instrument].amplitude;
+        if(instrument==="kecekRight" && document.querySelector("#kecekLegongToggle").checked && currentBeat%4===2) {
+          amplitude = 0.9
+        }
         playSample(futureBeatTime, noteDuration, smplIdx, amplitude);
       }
     };

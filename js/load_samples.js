@@ -25,7 +25,6 @@ const sampleFilePaths = [
 ];
 
 let audioBuffers = [];
-console.log(typeof audioBuffers);
 let filePathIndex = 0;
 
 function loadSamples() {
