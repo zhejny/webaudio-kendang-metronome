@@ -42,6 +42,6 @@ function loadSamples() {
   } else {
     console.log("samples loaded");
   }
-}, 500)
+}, 1001)
 };
 loadSamples();
