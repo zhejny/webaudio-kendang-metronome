@@ -39,6 +39,6 @@ function loadSamples() {
   if (filePathIndex < sampleFilePaths.length) {
     loadSamples();
   }
-}, 500)
+}, 1000)
 };
 loadSamples();
