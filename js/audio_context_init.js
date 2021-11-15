@@ -11,4 +11,4 @@ function audioContextCheck(){
   }
 }
 
-var audioContext = audioContextCheck();
+let audioContext = audioContextCheck();

@@ -7,15 +7,22 @@ let noteDuration = 3;
 let timerId = 0;
 let currentPola = "";
 
+let masterGain = audioContext.createGain();
+masterGain.gain.value = 0.81;
+masterGain.connect(audioContext.destination);
+
 const startStopButton = document.getElementById("startStopButton");
 const tempoSlider = document.getElementById("tempoSlider");
+const volumeSlider = document.getElementById("volumeSlider");
 
 startStopButton.addEventListener("click", function () {
   startLooper();
 });
 tempoSlider.addEventListener("change", function () {
   tempo = parseInt(document.getElementById("tempoSlider").value);
-  console.log(tempo);
+});
+volumeSlider.addEventListener("change", function () {
+  masterGain.gain.value = parseInt(document.getElementById("volumeSlider").value)/100;
 });
 
 function playSample(triggerTime, playDur, smplIdx, amplitude) {
@@ -28,7 +35,7 @@ function playSample(triggerTime, playDur, smplIdx, amplitude) {
   gainNode.value = 0.0;
 
   sample.connect(gainNode);
-  gainNode.connect(audioContext.destination);
+  gainNode.connect(masterGain);
 
   sample.start(triggerTime);
   gainNode.gain.linearRampToValueAtTime(amplitude, triggerTime + atkTime);

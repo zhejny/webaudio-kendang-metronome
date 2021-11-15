@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <!-- <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>Document</title>
   <script src="js/audio_context_init.js"></script>
   <script src="js/load_samples.js"></script>
@@ -19,6 +19,11 @@
     <input type="range" id="tempoSlider" value="135" min="40" max="200"
       oninput="this.nextElementSibling.value = this.value">
     tempo: <output>135</output> bpm
+  </div>
+  <div>
+    <input type="range" id="volumeSlider" value="81" min="0" max="100"
+      oninput="this.nextElementSibling.value = this.value">
+    volume: <output>81</output> %
   </div>
   <div>
     <select name="polaSelect" id="polaSelect">
