@@ -40,9 +40,8 @@ function playSample(triggerTime, playDur, smplIdx, amplitude) {
 function looper() {
   while (futureBeatTime < audioContext.currentTime + 0.10) {
     currentPola = document.querySelector("#polaSelect").value;
-    futureBeatTime += 0.25 * 60 / tempo; // could wrap this in its own function ey
+    futureBeatTime += 0.25 * 60 / tempo;
 
-    console.log(currentBeat);
     for (let instrument in polaDefinitions[currentPola].percussionInstruments) {
       if (
         polaDefinitions[currentPola].percussionInstruments[instrument].onsets.includes(currentBeat) && 
@@ -65,7 +64,7 @@ function looper() {
         const noteDuration = polaDefinitions[currentPola].melodicInstruments[instrument].durations[noteIndex] * 60 / tempo;
         const note = polaDefinitions[currentPola].melodicInstruments[instrument].melody[noteIndex];
         const smplIdx = polaDefinitions[currentPola].melodicInstruments[instrument].sampleIndex + note;
-        const amplitude = polaDefinitions[currentPola].percussionInstruments[instrument].amplitude;
+        const amplitude = polaDefinitions[currentPola].melodicInstruments[instrument].amplitude;
         playSample(futureBeatTime, noteDuration, smplIdx, amplitude);
       }
     };
