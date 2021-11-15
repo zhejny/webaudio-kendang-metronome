@@ -12,13 +12,62 @@
 </head>
 
 <body>
-
   <div>
     <button id="startStopButton">start/stop</button>
   </div>
   <div>
-    <input type="range" id="tempoSlider" value="135" min="40" max="200" oninput="this.nextElementSibling.value = this.value">
+    <input type="range" id="tempoSlider" value="135" min="40" max="200"
+      oninput="this.nextElementSibling.value = this.value">
     tempo: <output>135</output> bpm
+  </div>
+  <div>
+    <select name="polaSelect" id="polaSelect">
+      <option value="">[select pola]</option>
+      <option value="barongOmang">barong omang</option>
+      <option value="bapangJaukKeras">bapang jauk keras</option>
+    </select>
+  </div>
+  <div>
+    <input type="checkbox" id="gongWadonToggle" name="gongWadonToggle" checked>
+    <label for="gongWadonToggle">gong wadon</label>
+  </div>
+  <div>
+    <input type="checkbox" id="gongLanangToggle" name="gongLanangToggle" checked>
+    <label for="gongLanangToggle">gong lanang</label>
+  </div>
+  <div>
+    <input type="checkbox" id="klentongToggle" name="klentongToggle" checked>
+    <label for="klentongToggle">klentong*</label>
+  </div>
+  <div>
+    <input type="checkbox" id="kempurToggle" name="kempurToggle" checked>
+    <label for="kempurToggle">kempur*</label>
+  </div>
+  <div>
+    <input type="checkbox" id="kecekToggle" name="kecekToggle">
+    <label for="kecekToggle">kecek</label>
+    <!-- <input type="checkbox" id="kecekLegongToggle" name="kecekLegongToggle" checked>
+    <label for="kecekLegongToggle">pola legong/barong</label> -->
+  </div>
+  <div>
+    <input type="checkbox" id="klenangToggle" name="klenangToggle">
+    <label for="klenangToggle">klenang*</label>
+  </div>
+  <div>
+    <input type="checkbox" id="kempliToggle" name="kempliToggle" checked>
+    <label for="kempliToggle">kempli</label>
+  </div>
+  <div>
+    <input type="checkbox" id="gentoragToggle" name="gentoragToggle">
+    <label for="gentoragToggle">gentorag</label>
+  </div>
+  <div>
+    <input type="checkbox" id="jublagToggle" name="jublagToggle">
+    <label for="jublagToggle">jublag*</label>
+  </div>
+  <div>
+    <input type="checkbox" id="jegoganToggle" name="jegoganToggle">
+    <label for="jegoganToggle">jegogan*</label>
   </div>
   <script src="js/main.js"></script>
 </body>

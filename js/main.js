@@ -5,10 +5,11 @@ let patternLength = 32;
 let tempo = 135.0;
 let noteDuration = 3;
 let timerId = 0;
-let currentPola = "barongOmang";
+let currentPola = "";
 
 const startStopButton = document.getElementById("startStopButton");
 const tempoSlider = document.getElementById("tempoSlider");
+
 startStopButton.addEventListener("click", function () {
   startLooper();
 });
@@ -17,11 +18,10 @@ tempoSlider.addEventListener("change", function () {
   console.log(tempo);
 });
 
-function playSample(triggerTime, playDur, smplIdx) {
+function playSample(triggerTime, playDur, smplIdx, amplitude) {
   const sample = audioContext.createBufferSource();
   sample.buffer = audioBuffers[smplIdx];
   const gainNode = audioContext.createGain();
-  const amplitude = 1.0; // eventually this will read the current amplitude of each instrument
   const atkTime = 0.01;
   const relTime = 0.1;
   const susTime = playDur - atkTime - relTime;
@@ -37,40 +37,36 @@ function playSample(triggerTime, playDur, smplIdx) {
   sample.stop(triggerTime + playDur);
 }
 
-// function setPola(polaKey) {
-//   patternLength = polaDefinitions.polaKey.length;
-//   currentPola = polaDefinitions[polaKey];
-// };
-
-
 function looper() {
   while (futureBeatTime < audioContext.currentTime + 0.10) {
-
+    currentPola = document.querySelector("#polaSelect").value;
     futureBeatTime += 0.25 * 60 / tempo; // could wrap this in its own function ey
 
     console.log(currentBeat);
     for (let instrument in polaDefinitions[currentPola].percussionInstruments) {
       if (
-        polaDefinitions[currentPola].percussionInstruments[instrument].onsets.includes(currentBeat) //&& 
-        /*document.querySelector(currentPola[instrument].togId).checked*/
+        polaDefinitions[currentPola].percussionInstruments[instrument].onsets.includes(currentBeat) && 
+        document.querySelector(polaDefinitions[currentPola].percussionInstruments[instrument].togId).checked
       ) {
         const durationIndex = polaDefinitions[currentPola].percussionInstruments[instrument].onsets.indexOf(currentBeat);
         const noteDuration = polaDefinitions[currentPola].percussionInstruments[instrument].durations[durationIndex] * 60 / tempo;
         const smplIdx = polaDefinitions[currentPola].percussionInstruments[instrument].sampleIndex;
-        playSample(futureBeatTime, noteDuration, smplIdx);
+        const amplitude = polaDefinitions[currentPola].percussionInstruments[instrument].amplitude;
+        playSample(futureBeatTime, noteDuration, smplIdx, amplitude);
       }
     };
 
     for (let instrument in polaDefinitions[currentPola].melodicInstruments) {
       if (
-        polaDefinitions[currentPola].melodicInstruments[instrument].onsets.includes(currentBeat) //&& 
-        /*document.querySelector(currentPola[instrument].togId).checked*/
+        polaDefinitions[currentPola].melodicInstruments[instrument].onsets.includes(currentBeat) && 
+        document.querySelector(polaDefinitions[currentPola].melodicInstruments[instrument].togId).checked
       ) {
         const noteIndex = polaDefinitions[currentPola].melodicInstruments[instrument].onsets.indexOf(currentBeat);
         const noteDuration = polaDefinitions[currentPola].melodicInstruments[instrument].durations[noteIndex] * 60 / tempo;
         const note = polaDefinitions[currentPola].melodicInstruments[instrument].melody[noteIndex];
         const smplIdx = polaDefinitions[currentPola].melodicInstruments[instrument].sampleIndex + note;
-        playSample(futureBeatTime, noteDuration, smplIdx);
+        const amplitude = polaDefinitions[currentPola].percussionInstruments[instrument].amplitude;
+        playSample(futureBeatTime, noteDuration, smplIdx, amplitude);
       }
     };
 
@@ -84,8 +80,9 @@ function looper() {
 
 function startLooper() {
   isPlaying = !isPlaying;
+  currentPola = document.querySelector("#polaSelect").value;
   if (isPlaying) {
-    if (currentPola == undefined) {
+    if (currentPola === "") {
       alert("please choose pola first");
       isPlaying = false;
     } else {

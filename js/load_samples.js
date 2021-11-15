@@ -38,6 +38,8 @@ function loadSamples() {
   filePathIndex++
   if (filePathIndex < sampleFilePaths.length) {
     loadSamples();
+  } else {
+    console.log("samples loaded");
   }
 }, 500)
 };
