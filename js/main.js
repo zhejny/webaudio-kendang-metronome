@@ -65,7 +65,7 @@ function looper() {
         const noteDuration = polaDefinitions[currentPola].melodicInstruments[instrument].durations[noteIndex] * 60 / tempo;
         const note = polaDefinitions[currentPola].melodicInstruments[instrument].melody[noteIndex];
         const smplIdx = polaDefinitions[currentPola].melodicInstruments[instrument].sampleIndex + note;
-        const amplitude = polaDefinitions[currentPola].percussionInstruments[instrument].amplitude;
+        const amplitude = polaDefinitions[currentPola].melodicInstruments[instrument].amplitude;
         playSample(futureBeatTime, noteDuration, smplIdx, amplitude);
       }
     };
