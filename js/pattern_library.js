@@ -858,5 +858,61 @@ const polaDefinitions = {
     },
     melodicInstruments: {
     }
+  },
+  gilak10Beat: {
+    length: 40,
+    percussionInstruments: {
+      gongWadon: {
+        sampleIndex: 0,
+        onsets: [0],
+        durations: [20],
+        togId: "#gongWadonToggle",
+        amplitude: 1
+      },
+      gongLanang: {
+        sampleIndex: 1,
+        onsets: [20],
+        durations: [20],
+        togId: "#gongLanangToggle",
+        amplitude: 1
+      },
+      kempur: {
+        sampleIndex: 3,
+        onsets: [24, 36],
+        durations: [3, 1],
+        togId: "#kempurToggle",
+        amplitude: 1
+      },
+      kempli: {
+        sampleIndex: 5,
+        onsets: [0,4,8,12,16,20,24,28,32,36],
+        durations: [1,1,1,1,1,1,1,1,1,1],
+        togId: "#kempliToggle",
+        amplitude: 1
+      },
+      gentorag: {
+        sampleIndex: 6,
+        onsets: [0],
+        durations: [40],
+        togId: "#gentoragToggle",
+        amplitude: 0.25
+      },
+      kecekRight: {
+        sampleIndex: 7,
+        onsets: [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38],
+        durations: [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],
+        togId: "#kecekToggle",
+        amplitude: 0.3
+      },
+      kecekLeft: {
+        sampleIndex: 8,
+        onsets: [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39],
+        durations: [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],
+        togId: "#kecekToggle",
+        amplitude: 0.3
+      }
+    },
+    melodicInstruments: {
+    }
   }
 }
