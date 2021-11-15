@@ -42,7 +42,6 @@ function looper() {
     currentPola = document.querySelector("#polaSelect").value;
     futureBeatTime += 0.25 * 60 / tempo; // could wrap this in its own function ey
 
-    console.log(currentBeat);
     for (let instrument in polaDefinitions[currentPola].percussionInstruments) {
       if (
         polaDefinitions[currentPola].percussionInstruments[instrument].onsets.includes(currentBeat) && 
