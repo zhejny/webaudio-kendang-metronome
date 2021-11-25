@@ -625,7 +625,7 @@ const polaDefinitions = {
       kempur: {
         sampleIndex: 3,
         onsets: [8,24],
-        durations: [4],
+        durations: [4,4],
         togId: "#kempurToggle",
         amplitude: 1
       },
