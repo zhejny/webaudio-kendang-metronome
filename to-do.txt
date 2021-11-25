@@ -1,0 +1,9 @@
+~ turn amplitude attributes into global variables
+
+~ solve buffer loading issue
+
+~ clean up samples
+
+~ spatialize instruments
+
+~ assign default tempos to patterns

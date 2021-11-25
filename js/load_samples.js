@@ -28,6 +28,7 @@ let audioBuffers = [];
 let filePathIndex = 0;
 
 function loadSamples() {
+  let waitTime = 1000;
   setTimeout(function() {
     fetch(sampleFilePaths[filePathIndex])
     .then(data => data.arrayBuffer())
@@ -35,12 +36,14 @@ function loadSamples() {
     .then(decodedAudio => {
       audioBuffers.push(decodedAudio);
   });
+  
   filePathIndex++
   if (filePathIndex < sampleFilePaths.length) {
     loadSamples();
   } else {
     console.log("samples loaded");
   }
-}, 1001)
+}, waitTime)
 };
+
 loadSamples();

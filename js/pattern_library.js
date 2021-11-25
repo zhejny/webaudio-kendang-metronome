@@ -1,6 +1,7 @@
 const polaDefinitions = {
   barongBaris: {
     length: 32,
+    defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -80,6 +81,7 @@ const polaDefinitions = {
   },
   barongCondong: {
     length: 64,
+    defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -159,6 +161,7 @@ const polaDefinitions = {
   },
   barongGoakMacok: {
     length: 32,
+    defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -238,6 +241,7 @@ const polaDefinitions = {
   },
   barongOmang: {
     length: 32,
+    defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -317,6 +321,7 @@ const polaDefinitions = {
   },
   bapangJaukKeras: {
     length: 32,
+    defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -375,7 +380,7 @@ const polaDefinitions = {
         melody: [1,4,5,0,1,4,5,0],
         durations: [1,1,1,1,1,1,1,1],
         togId: "#jublagToggle",
-        amplitude: 0.5
+        amplitude: 0.33
       },
       jegogan: {
         sampleIndex: 9,
@@ -383,12 +388,13 @@ const polaDefinitions = {
         melody: [1,1,5],
         durations: [4,2,2],
         togId: "#jegoganToggle",
-        amplitude: 0.5
+        amplitude: 0.4
       }
     }
   },
   pengadengJaukKeras: {
     length: 128,
+    defaultTempo: 117,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -461,6 +467,7 @@ const polaDefinitions = {
   },
   bapangJaukManis: {
     length: 64,
+    defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -533,6 +540,7 @@ const polaDefinitions = {
   },
   pengadengJaukManis: {
     length: 128,
+    defaultTempo: 117,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -603,8 +611,82 @@ const polaDefinitions = {
       }
     }
   },
+  bapangBarisTunggal: {
+    length: 32,
+    defaultTempo: 135,
+    percussionInstruments: {
+      gongWadon: {
+        sampleIndex: 0,
+        onsets: [0],
+        durations: [8],
+        togId: "#gongWadonToggle",
+        amplitude: 1
+      },
+      kempur: {
+        sampleIndex: 3,
+        onsets: [8,24],
+        durations: [4],
+        togId: "#kempurToggle",
+        amplitude: 1
+      },
+      klentong: {
+        sampleIndex: 2,
+        onsets: [16],
+        durations: [8],
+        togId: "#klentongToggle",
+        amplitude: 1
+      },
+      kempli: {
+        sampleIndex: 5,
+        onsets: [0,4,8,12,16,20,24,28],
+        durations: [1,1,1,1,1,1,1,1],
+        togId: "#kempliToggle",
+        amplitude: 1
+      },
+      gentorag: {
+        sampleIndex: 6,
+        onsets: [0],
+        durations: [8],
+        togId: "#gentoragToggle",
+        amplitude: 0.25
+      },
+      kecekRight: {
+        sampleIndex: 7,
+        onsets: [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30],
+        durations: [1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3],
+        togId: "#kecekToggle",
+        amplitude: 0.3
+      },
+      kecekLeft: {
+        sampleIndex: 8,
+        onsets: [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31],
+        durations: [1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3],
+        togId: "#kecekToggle",
+        amplitude: 0.3
+      }
+    },
+    melodicInstruments: {
+      jublag: {
+        sampleIndex: 16,
+        onsets: [0,4,8,12,16,20,24,28],
+        melody: [2,4,5,4,2,4,0,4],
+        durations: [1,1,1,1,1,1,1,1],
+        togId: "#jublagToggle",
+        amplitude: 0.33
+      },
+      jegogan: {
+        sampleIndex: 9,
+        onsets: [0,16,24],
+        melody: [2,2,0],
+        durations: [4,2,2],
+        togId: "#jegoganToggle",
+        amplitude: 0.4
+      }
+    }
+  },
   pengipukKebyarDuduk: {
     length: 192,
+    defaultTempo: 117,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -677,6 +759,7 @@ const polaDefinitions = {
   },
   pengipukTerunaJaya: {
     length: 192,
+    defaultTempo: 117,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -749,6 +832,7 @@ const polaDefinitions = {
   },
   gilak8Beat: {
     length: 32,
+    defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -805,6 +889,7 @@ const polaDefinitions = {
   },
   gilak16Beat: {
     length: 64,
+    defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
@@ -861,6 +946,7 @@ const polaDefinitions = {
   },
   gilak10Beat: {
     length: 40,
+    defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
         sampleIndex: 0,
