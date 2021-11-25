@@ -4,6 +4,6 @@
 
 ~ clean up samples
 
-~ spatialize instruments
+~ spatialize instruments?
 
 ~ assign default tempos to patterns
