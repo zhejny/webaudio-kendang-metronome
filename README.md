@@ -1,2 +1,1 @@
-cycles gong and melody patterns from balinese gamelan
-intended for practicing kendang tunggal
+cycles gong and melody patterns from balinese dance music; intended for practicing kendang tunggal
