@@ -319,6 +319,70 @@ const polaDefinitions = {
       }
     }
   },
+  batel: {
+    length: 16,
+    defaultTempo: 135,
+    percussionInstruments: {
+      gongWadon: {
+        sampleIndex: 0,
+        onsets: [0],
+        durations: [8],
+        togId: "#gongWadonToggle",
+        amplitude: 1
+      },
+      gongLanang: {
+        sampleIndex: 1,
+        onsets: [8],
+        durations: [8],
+        togId: "#gongLanangToggle",
+        amplitude: 1
+      },
+      klentong: {
+        sampleIndex: 2,
+        onsets: [4, 12],
+        durations: [8, 8],
+        togId: "#klentongToggle",
+        amplitude: 1
+      },
+      klenang: {
+        sampleIndex: 4,
+        onsets: [2,6,10,14],
+        durations: [1,1,1,1],
+        togId: "#klenangToggle",
+        amplitude: 1
+      },
+      kempli: {
+        sampleIndex: 5,
+        onsets: [0,4,8,12],
+        durations: [1,1,1,1],
+        togId: "#kempliToggle",
+        amplitude: 1
+      },
+      gentorag: {
+        sampleIndex: 6,
+        onsets: [0,8],
+        durations: [4,4],
+        togId: "#gentoragToggle",
+        amplitude: 0.25
+      },
+      kecekRight: {
+        sampleIndex: 7,
+        onsets: [0,2,4,6,8,10,12,14],
+        durations: [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],
+        togId: "#kecekToggle",
+        amplitude: 0.3
+      },
+      kecekLeft: {
+        sampleIndex: 8,
+        onsets: [1,3,5,7,9,11,13,15],
+        durations: [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],
+        togId: "#kecekToggle",
+        amplitude: 0.3
+      }
+    },
+    melodicInstruments: {
+    }
+  },
   bapangJaukKeras: {
     length: 32,
     defaultTempo: 135,
