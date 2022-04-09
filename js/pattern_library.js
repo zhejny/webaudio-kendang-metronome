@@ -324,16 +324,16 @@ const polaDefinitions = {
     defaultTempo: 135,
     percussionInstruments: {
       gongWadon: {
-        sampleIndex: 0,
+        sampleIndex: 1,
         onsets: [0],
-        durations: [8],
+        durations: [2],
         togId: "#gongWadonToggle",
         amplitude: 1
       },
       gongLanang: {
         sampleIndex: 1,
         onsets: [8],
-        durations: [8],
+        durations: [2],
         togId: "#gongLanangToggle",
         amplitude: 1
       },
@@ -347,7 +347,7 @@ const polaDefinitions = {
       klenang: {
         sampleIndex: 4,
         onsets: [2,6,10,14],
-        durations: [1,1,1,1],
+        durations: [0.5,0.5,0.5,0.5],
         togId: "#klenangToggle",
         amplitude: 1
       },
