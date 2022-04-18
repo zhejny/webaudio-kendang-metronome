@@ -1,0 +1,113 @@
+
+.header {
+	display: grid;
+	grid-template-columns: repeat(2, 50vw);
+	place-items: center start;
+	height: 20vh;
+	grid-gap: 2rem;
+}
+
+.grid-container {
+  width: 100vw;
+  height: 75vh;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 25vw);
+}
+
+.instrument {
+  background: lightblue;
+  border-radius: 10px;
+}
+
+.container {
+	margin-top: 10px;
+}
+
+select {
+  display: inline-block;
+  height: 44px;
+  width: 25vw;
+  outline: none;
+  border: 1px solid #C8BFC4;
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 2px #DDD8DC;
+  background: #FFF;
+  font-size: medium;
+} 
+
+.slider {
+	font-size: medium;
+}
+
+#startStopButton {
+	margin-top: 15px;
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 20vw;
+}
+
+.notPlaying {
+  background-color: lightgreen;
+}
+
+.playing {
+  background-color: red;
+}
+
+input[type="range"] {
+	display: block;
+	outline: 0;
+	border: 0;
+	border-radius: 500px;
+	width: 25vw;
+	max-width: 25vw;
+	margin: 24px 0 16px;
+	transition: box-shadow 0.2s ease-in-out;
+	
+	// Chrome
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		& {
+			overflow: hidden;
+			height: 40px;
+			-webkit-appearance: none;
+			background-color: #ddd;
+		}
+		&::-webkit-slider-runnable-track {
+			height: 40px;
+			-webkit-appearance: none;
+			color: #444;
+			// margin-top: -1px;
+			transition: box-shadow 0.2s ease-in-out;
+		}
+		&::-webkit-slider-thumb {
+			width: 40px;
+			-webkit-appearance: none;
+			height: 40px;
+			cursor: ew-resize;
+			background: #fff;
+			box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
+			border-radius: 50%;
+			transition: box-shadow 0.2s ease-in-out;
+			position: relative;
+			// top: 1px;
+		}
+		&:active::-webkit-slider-thumb {
+			background: #fff;
+			box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
+		}
+	}
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}

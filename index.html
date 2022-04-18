@@ -2,91 +2,96 @@
 <html lang="en">
 
 <head>
-  <!-- <meta charset="UTF-8">
+	<!-- <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <title>pelatih makendang</title>
-  <script src="js/audio_context_init.js"></script>
-  <script src="js/load_samples.js"></script>
-  <script src="js/pattern_library.js"></script>
-</head>
+	<title>pelatih makendang</title>
+	<script src="js/audio_context_init.js"></script>
+	<script src="js/load_samples.js"></script>
+	<script src="js/pattern_library.js"></script>
+	<link rel="stylesheet" href="style.css"> </head>
 
 <body>
-  <div>
-    <button id="startStopButton">start/stop</button>
-  </div>
-  <div>
-    <input type="range" id="tempoSlider" value="135" min="40" max="200"
-      oninput="this.nextElementSibling.value = this.value">
-    tempo: <output>135</output> bpm
-  </div>
-  <div>
-    <input type="range" id="volumeSlider" value="81" min="0" max="100"
-      oninput="this.nextElementSibling.value = this.value">
-    volume: <output>81</output> %
-  </div>
-  <div>
-    <select name="polaSelect" id="polaSelect">
-      <option value="">[select pola]</option>
-      <option value="barongBaris">barong baris</option>
-      <option value="barongCondong">barong condong</option>
-      <option value="barongGoakMacok">barong goak macok</option>
-      <option value="barongOmang">barong omang</option>
-      <option value="batel">batel</option>
-      <option value="bapangJaukKeras">bapang jauk keras</option>
-      <option value="pengadengJaukKeras">pengadeng jauk keras</option>
-      <option value="bapangJaukManis">bapang jauk manis</option>
-      <option value="bapangBarisTunggal">bapang baris tunggal</option>
-      <option value="pengadengJaukManis">pengadeng jauk manis</option>
-      <option value="pengipukKebyarDuduk">pengipuk kebyar duduk</option>
-      <option value="pengipukTerunaJaya">pengipuk teruna jaya</option>
-      <option value="gilak8Beat">gilak 8-beat</option>
-      <option value="gilak16Beat">gilak 16-beat</option>
-      <option value="gilak10Beat">gilak 10-beat</option>
-    </select>
-  </div>
-  <div>
-    <input type="checkbox" id="gongWadonToggle" name="gongWadonToggle" checked>
-    <label for="gongWadonToggle">gong wadon</label>
-  </div>
-  <div>
-    <input type="checkbox" id="gongLanangToggle" name="gongLanangToggle" checked>
-    <label for="gongLanangToggle">gong lanang</label>
-  </div>
-  <div>
-    <input type="checkbox" id="klentongToggle" name="klentongToggle" checked>
-    <label for="klentongToggle">klentong</label>
-  </div>
-  <div>
-    <input type="checkbox" id="kempurToggle" name="kempurToggle" checked>
-    <label for="kempurToggle">kempur</label>
-  </div>
-  <div>
-    <input type="checkbox" id="kecekToggle" name="kecekToggle" checked>
-    <label for="kecekToggle">kecek</label>
-    <input type="checkbox" id="kecekLegongToggle" name="kecekLegongToggle" checked>
-    <label for="kecekLegongToggle">pola legong/barong</label>
-  </div>
-  <div>
-    <input type="checkbox" id="klenangToggle" name="klenangToggle" checked>
-    <label for="klenangToggle">klenang</label>
-  </div>
-  <div>
-    <input type="checkbox" id="kempliToggle" name="kempliToggle" checked>
-    <label for="kempliToggle">kempli</label>
-  </div>
-  <div>
-    <input type="checkbox" id="gentoragToggle" name="gentoragToggle">
-    <label for="gentoragToggle">gentorag</label>
-  </div>
-  <div>
-    <input type="checkbox" id="jublagToggle" name="jublagToggle">
-    <label for="jublagToggle">jublag</label>
-  </div>
-  <div>
-    <input type="checkbox" id="jegoganToggle" name="jegoganToggle">
-    <label for="jegoganToggle">jegogan</label>
-  </div>
-  <script src="js/main.js"></script>
+	<div class="header">
+		<div class="container">
+			<div class="slider"> tempo:
+				<output>135</output> bpm
+				<input type="range" id="tempoSlider" value="135" min="40" max="200" oninput="this.nextElementSibling.value = this.value"> </div>
+			<div class="slider"> volume:
+				<output>81</output> %
+				<input type="range" id="volumeSlider" value="81" min="0" max="100" oninput="this.nextElementSibling.value = this.value"> </div>
+		</div>
+		<div class="container">
+			<div>
+				<select name="polaSelect" id="polaSelect">
+					<option value="">select pola</option>
+					<option value="barongBaris">barong baris</option>
+					<option value="barongCondong">barong condong</option>
+					<option value="barongGoakMacok">barong goak macok</option>
+					<option value="barongOmang">barong omang</option>
+					<option value="batel">batel</option>
+					<option value="bapangJaukKeras">bapang jauk keras</option>
+					<option value="pengadengJaukKeras">pengadeng jauk keras</option>
+					<option value="bapangJaukManis">bapang jauk manis</option>
+					<option value="bapangBarisTunggal">bapang baris tunggal</option>
+					<option value="pengadengJaukManis">pengadeng jauk manis</option>
+					<option value="pengipukKebyarDuduk">pengipuk kebyar duduk</option>
+					<option value="pengipukTerunaJaya">pengipuk teruna jaya</option>
+					<option value="gilak8Beat">gilak 8-beat</option>
+					<option value="gilak16Beat">gilak 16-beat</option>
+					<option value="gilak10Beat">gilak 10-beat</option>
+				</select>
+			</div>
+			<div>
+				<button id="startStopButton" class="notPlaying">Play</button>
+			</div>
+		</div>
+	</div>
+	<div class="grid-container">
+		<div class="instrument">
+			<input type="checkbox" id="gongWadonToggle" name="gongWadonToggle" checked>
+			<label for="gongWadonToggle">gong wadon</label>
+		</div>
+		<div class="instrument">
+			<input type="checkbox" id="gongLanangToggle" name="gongLanangToggle" checked>
+			<label for="gongLanangToggle">gong lanang</label>
+		</div>
+		<div class="instrument">
+			<input type="checkbox" id="klentongToggle" name="klentongToggle" checked>
+			<label for="klentongToggle">klentong</label>
+		</div>
+		<div class="instrument">
+			<input type="checkbox" id="kempurToggle" name="kempurToggle" checked>
+			<label for="kempurToggle">kempur</label>
+		</div>
+		<div class="instrument">
+			<input type="checkbox" id="kecekToggle" name="kecekToggle" checked>
+			<label for="kecekToggle">kecek</label>
+			<input type="checkbox" id="kecekLegongToggle" name="kecekLegongToggle" checked>
+			<label for="kecekLegongToggle">pola legong/barong</label>
+		</div>
+		<div class="instrument">
+			<input type="checkbox" id="klenangToggle" name="klenangToggle" checked>
+			<label for="klenangToggle">klenang</label>
+		</div>
+		<div class="instrument">
+			<input type="checkbox" id="kempliToggle" name="kempliToggle" checked>
+			<label for="kempliToggle">kempli</label>
+		</div>
+		<div class="instrument">
+			<input type="checkbox" id="gentoragToggle" name="gentoragToggle">
+			<label for="gentoragToggle">gentorag</label>
+		</div>
+		<div class="instrument">
+			<input type="checkbox" id="jublagToggle" name="jublagToggle">
+			<label for="jublagToggle">jublag</label>
+		</div>
+		<div class="instrument">
+			<input type="checkbox" id="jegoganToggle" name="jegoganToggle">
+			<label for="jegoganToggle">jegogan</label>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
 </body>
+
 </html>

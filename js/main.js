@@ -88,6 +88,20 @@ function looper() {
   timerId = window.setTimeout(looper, 1.0);
 }
 
+function updateButtonState(currentState) {
+	
+	if (currentState == "stop") {
+	
+		startStopButton.className = "playing";
+		startStopButton.innerHTML = "Stop";
+	}
+	else {
+	
+		startStopButton.className = "notPlaying";
+		startStopButton.innerHTML = "Play";
+	}
+}
+
 function startLooper() {
   isPlaying = !isPlaying;
   currentPola = document.querySelector("#polaSelect").value;
@@ -99,10 +113,12 @@ function startLooper() {
       currentBeat = 0;
       futureBeatTime = audioContext.currentTime;
       looper();
+      updateButtonState("stop");
       return "stop";
     }
   } else {
     window.clearTimeout(timerId);
+    updateButtonState("play");
     return "play";
   }
 }
