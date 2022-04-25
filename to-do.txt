@@ -1,9 +1,0 @@
-~ turn amplitude attributes into global variables
-
-~ solve buffer loading latency issue
-
-~ clean up samples
-
-~ spatialize instruments?
-
-~ assign default tempos to gong patterns
