@@ -778,7 +778,7 @@ const polaDefinitions = {
       kempur: {
         sampleIndex: 3,
         onsets: [32,96,160,180,188],
-        durations: [64,64,64,64,64],
+        durations: [64,64,20,8,48],
         togId: "#kempurToggle",
         amplitude: 1
       },
@@ -825,6 +825,79 @@ const polaDefinitions = {
         onsets: [0,32,64,96,128,160],
         melody: [0,0,0,4,4,4],
         durations: [8,8,8,8,8,8],
+        togId: "#jegoganToggle",
+        amplitude: 0.5
+      }
+    }
+  },
+  pengecetTerunaJaya: {
+    length: 64,
+    defaultTempo: 117,
+    percussionInstruments: {
+      gongWadon: {
+        sampleIndex: 0,
+        onsets: [0],
+        durations: [64],
+        togId: "#gongWadonToggle",
+        amplitude: 1
+      },
+      klentong: {
+        sampleIndex: 2,
+        onsets: [32],
+        durations: [64],
+        togId: "#klentongToggle",
+        amplitude: 1
+      },
+      kempur: {
+        sampleIndex: 3,
+        onsets: [16, 48],
+        durations: [32,32],
+        togId: "#kempurToggle",
+        amplitude: 1
+      },
+      kempli: {
+        sampleIndex: 5,
+        onsets: [0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64],
+        durations: [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+        togId: "#kempliToggle",
+        amplitude: 1
+      },
+      gentorag: {
+        sampleIndex: 6,
+        onsets: [0],
+        durations: [64],
+        togId: "#gentoragToggle",
+        amplitude: 0.25
+      },
+      kecekRight: {
+        sampleIndex: 7,
+        onsets: [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62],
+        durations: [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],
+        togId: "#kecekToggle",
+        amplitude: 0.3
+      },
+      kecekLeft: {
+        sampleIndex: 8,
+        onsets: [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63],
+        durations: [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],
+        togId: "#kecekToggle",
+        amplitude: 0.3
+      }
+    },
+    melodicInstruments: {
+      jublag: {
+        sampleIndex: 16,
+        onsets: [0,8,16,24,32,40,48,56],
+        melody: [1,2,5,2,1,5,0,2],
+        durations: [2,2,2,2,2,2,2,2],
+        togId: "#jublagToggle",
+        amplitude: 0.5
+      },
+      jegogan: {
+        sampleIndex: 9,
+        onsets: [0,16,32,48],
+        melody: [1,5,1,0],
+        durations: [4,4,4,4],
         togId: "#jegoganToggle",
         amplitude: 0.5
       }

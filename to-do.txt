@@ -1,9 +1,5 @@
-~ turn amplitude attributes into global variables
-
-~ solve buffer loading issue
-
-~ clean up samples
-
-~ spatialize instruments?
-
-~ assign default tempos to patterns
+global control for amplitude attributes
+buffer loading issue (safari)
+treat samples/audio mixer
+spaitalize instruments?
+assign default tempi to pattern templates
